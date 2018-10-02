@@ -6,8 +6,6 @@ lint:
 	npm run eslint .
 build:
 	npm run build
-test:
-	NODE_ENV="test" npm test
 
 prepare:
 	touch .bash_history
@@ -15,6 +13,9 @@ prepare:
 
 start:
 	DEBUG="application:*" npm run nodemon -- --watch .  --ext '.js' --exec npm run gulp -- server
+
+debug:
+	DEBUG="application:*" npm run gulp -- debug
 
 console:
 	npm run gulp console

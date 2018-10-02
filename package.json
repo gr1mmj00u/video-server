@@ -4,7 +4,6 @@
   "description": "Video server",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV='test' jest",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
@@ -18,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gr1mmj00u/project-lvl4-s239.git"
+    "url": "git+https://github.com/gr1mmj00u/video-server.git"
   },
   "keywords": [
     "task",
@@ -27,31 +26,20 @@
   "author": "Stanislav Kharitonov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gr1mmj00u/project-lvl4-s239/issues"
+    "url": "https://github.com/gr1mmj00u/video-server/issues"
   },
-  "homepage": "https://github.com/gr1mmj00u/project-lvl4-s239#readme",
-  "jest": {
-    "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/__tests__/__fixtures__/",
-      "<rootDir>/__tests__/helpers/"
-    ]
-  },
+  "homepage": "https://github.com/gr1mmj00u/video-server#readme",
   "dependencies": {
     "dotenv": "^5.0.1",
+    "fluent-ffmpeg": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.8",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
-    "koa-flash-simple": "0.0.3",
-    "koa-generic-session": "^2.0.1",
     "koa-logger": "^3.2.0",
-    "koa-methodoverride": "^2.0.0",
-    "koa-pug": "^3.0.0-2",
+    "koa-multer": "^1.0.2",
     "koa-router": "^7.4.0",
-    "koa-static": "^4.0.3",
-    "lodash": "^4.17.10"
+    "koa-static": "^4.0.3"
   },
   "devDependencies": {
     "@babel/register": "^7.0.0-beta.51",
@@ -72,10 +60,6 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-flowtype": "^2.47.1",
     "eslint-plugin-import": "^2.12.0",
-    "jest": "^23.0.1",
-    "jest-cli": "^23.0.1",
-    "jest-supertest-matchers": "0.0.1",
-    "nodemon": "^1.17.5",
-    "supertest": "^3.1.0"
+    "nodemon": "^1.17.5"
   }
 }
